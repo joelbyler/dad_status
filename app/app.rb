@@ -30,7 +30,6 @@ class App < Sinatra::Base
   private
 
   def send_photon_message(message)
-    binding.pry
     Net::HTTP.get(uri_for_photon(message))
   end
 
