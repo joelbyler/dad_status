@@ -3,6 +3,14 @@
 ## Dev notes
 Heroku's [heroku-docker plugin][1] is a fantastic way to get the best of both worlds: easy local development with Docker and (almost) foolproof production on Heroku. All you need to start is the [Heroku Toolbelt][2].
 
+Environment variables:
+
+* this app uses the dotenv gem
+* see .env.sample for a list of environment variables to assign
+  - __MAKER_TOKEN__ this is the token from the IFTTT Maker channel, you should user your own and keep it a secret
+* Rename the file to .env for testing locally
+* Set the variables in your Heroku app's settings when running on Heroku
+
 Make sure the plugin is installed:
 
     heroku plugins:install heroku-docker
