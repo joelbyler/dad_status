@@ -4,3 +4,6 @@
 
 # RSpec
 spec/examples.txt
+
+# DOTENV files
+.env

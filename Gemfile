@@ -3,6 +3,7 @@ ruby '2.2.3'
 
 gem 'rake'
 gem 'sinatra'
+gem 'dotenv'
 
 group :production do
   gem 'puma'

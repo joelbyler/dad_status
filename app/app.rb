@@ -1,8 +1,15 @@
 require 'sinatra/base'
 require 'net/http'
+require 'dotenv'
 
 # nodoc
 class App < Sinatra::Base
+
+  def initialize
+    super
+    Dotenv.load
+  end
+
   get '/' do
     'Hello, world!'
   end
