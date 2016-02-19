@@ -11,27 +11,11 @@ class App < Sinatra::Base
   end
 
   get '/' do
-    'Hello, world!'
+    redirect to('/index.html')
   end
 
-  get '/free' do
-    send_photon_message('i_am_free')
-  end
-
-  get '/busy' do
-    send_photon_message('i_am_working')
-  end
-
-  get '/dnd' do
-    send_photon_message('do_not_disturb')
-  end
-
-  get '/driving' do
-    send_photon_message('i_am_driving')
-  end
-
-  get '/done' do
-    send_photon_message('i_am_done')
+  get '/update/:status' do |status|
+    send_photon_message(status)
   end
 
   private
